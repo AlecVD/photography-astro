@@ -1,3 +1,30 @@
 ---
+const mainLinks: { label: string; href: string}[] = [
+	{ label: 'home', href: '/'},
+	{ label: 'travel', href: '/travel/'},
+	{ label: 'contact', href: '/contact'},
+];
 ---
-<div>Nav</div>
+<div class="nav-bar">
+    <div class="title">Alec van Dijken Photography</div>
+    <div class="nav-links">
+        {
+            mainLinks.map(({ label, href}) => (
+                <a
+                    aria-current={Astro.url.pathname === href}
+                    class:list={[
+                        'link',
+                        {
+                            active:
+                                Astro.url.pathname === href ||
+                                (href !== '/' && Astro.url.pathname.startsWith(href)),
+                        },
+                    ]}
+                    href={href}
+                > 
+                {label}
+                </a>
+            ))
+        }
+    </div>
+</div>

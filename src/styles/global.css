@@ -4,7 +4,25 @@
   --font-body: "Public Sans", var(--font-system);
   --font-brand: Rubik, var(--font-system);
 }
-html{
+html,body{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+  overflow-y: scroll;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.gallery img{
+  width: 19%;
+  height: auto;
+  padding-bottom: 1em;
+}
+.nav-bar{
+  display: flex;
 }
