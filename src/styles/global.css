@@ -3,8 +3,34 @@
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-body: "Public Sans", var(--font-system);
   --font-brand: Rubik, var(--font-system);
+  
 }
-html{
+html,body{
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+h1,h2,h3,h4,h5,p{
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-y: scroll;
+  font-family: var(--font-body);
+  font-weight: 200;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+.gallery img{
+  width: 19%;
+  height: auto;
+  padding-bottom: 1em;
 }

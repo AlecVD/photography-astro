@@ -1,3 +1,53 @@
 ---
+const mainLinks: { label: string; href: string}[] = [
+	{ label: 'home', href: '/'},
+	{ label: 'travel', href: '/travel/'},
+	{ label: 'contact', href: '/contact/'},
+];
 ---
-<div>Nav</div>
+<div class="nav-bar">
+    <div class="title">Alec van Dijken Photography</div>
+    <div class="nav-links">
+        {
+            mainLinks.map(({ label, href}) => (
+                <a
+                    aria-current={Astro.url.pathname === href}
+                    class:list={[
+                        'link',
+                        {
+                            active:
+                                Astro.url.pathname === href ||
+                                (href !== '/' && Astro.url.pathname.startsWith(href)),
+                        },
+                    ]}
+                    href={href}
+                > 
+                {label}
+                </a>
+            ))
+        }
+    </div>
+</div>
+<style>
+    .title{
+        font-size: 3em;
+    }
+    .nav-links{
+        margin-left: 2em;
+        display: flex;
+        gap: 1em;
+        text-decoration: none;
+    }
+    .nav-links a{
+        text-decoration: none;
+        color: black;
+    }
+    .nav-links a.active{
+        text-decoration: underline;
+    }
+    .nav-bar{
+        display: flex;
+        align-items: baseline;
+        padding: 2em 2em 2.5em 4em;
+    }
+</style>
