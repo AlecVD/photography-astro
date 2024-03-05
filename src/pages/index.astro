@@ -1,14 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from "astro:assets"
-const images = await Astro.glob('..//assets/portrait/*.{jpeg,jpg,png,gif}');
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
 ---
 
 <BaseLayout title="Portraits">
-	<div class="gallery">
-		{images.map((img) => <Image src={img.default} alt='portraits' quality='max'/>)}
-	</div>
+    <div class="gallery">
+        {
+            images.map((img) => (
+                <Image src={img.default} alt="portraits" quality="max" />
+            ))
+        }
+    </div>
 </BaseLayout>
 
-<style>
-</style>
+<style></style>

@@ -1,51 +1,53 @@
 ---
-const mainLinks: { label: string; href: string}[] = [
-	{ label: 'portrait', href: '/'},
-	{ label: 'travel', href: '/travel/'},
-	{ label: 'contact', href: '/contact/'},
+const mainLinks: { label: string; href: string }[] = [
+    { label: "portrait", href: "/" },
+    { label: "travel", href: "/travel/" },
+    { label: "contact", href: "/contact/" },
 ];
 ---
+
 <div class="nav-bar">
     <div class="title">alec van dijken photography</div>
     <div class="nav-links">
         {
-            mainLinks.map(({ label, href}) => (
+            mainLinks.map(({ label, href }) => (
                 <a
                     aria-current={Astro.url.pathname === href}
                     class:list={[
-                        'link',
+                        "link",
                         {
                             active:
                                 Astro.url.pathname === href ||
-                                (href !== '/' && Astro.url.pathname.startsWith(href)),
+                                (href !== "/" &&
+                                    Astro.url.pathname.startsWith(href)),
                         },
                     ]}
                     href={href}
-                > 
-                {label}
+                >
+                    {label}
                 </a>
             ))
         }
     </div>
 </div>
 <style>
-    .title{
+    .title {
         font-size: 3em;
     }
-    .nav-links{
+    .nav-links {
         margin-left: 2em;
         display: flex;
         gap: 1em;
         text-decoration: none;
     }
-    .nav-links a{
+    .nav-links a {
         text-decoration: none;
         color: black;
     }
-    .nav-links a.active{
+    .nav-links a.active {
         text-decoration: underline;
     }
-    .nav-bar{
+    .nav-bar {
         display: flex;
         align-items: baseline;
         padding: 2em 2em 2.5em 0em;
