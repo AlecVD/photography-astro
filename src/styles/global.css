@@ -37,7 +37,8 @@ body {
     justify-content: space-between;
 }
 .gallery img {
-    width: 24.3%;
+    /* width: 24.3%; */
+    width: 19.3%;
     height: auto;
     padding-bottom: 1em;
 }
