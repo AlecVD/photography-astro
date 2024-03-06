@@ -4,33 +4,38 @@ import ContactForm from "../components/ContactForm.astro"
 ---
 
 <BaseLayout title="Contact">
+  <div class="contact-cards">
     <div>
-        <!-- <h1>Contact Me</h1> -->
         <p>
-            Let's work together! You can also reach out via <a class="social-link" href="">Instagram</a>, <a class="social-link" href="">Phone</a> or <a class="social-link" href="">Email</a>.
+            Let's work together! Please reach out via <a class="social-link" href="https://www.instagram.com/alecvdfoto/" target="_blank" rel="noopener noreferrer">Instagram</a> or <a class="social-link" href="mailto:alec.vandijken@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>.
         </p>
         <p>-Alec</p>
     </div>
     <div>
-        <!-- <h2>Grad Photos</h2>
+        <h2>Grad Photos</h2>
         <p>
-            If you are in the bay area I am now booking grad portrait sessions!
-        </p> -->
-        <a
-            data-cal-link="alecvd/photo-session"
-            data-cal-namespace=""
-            data-cal-config='{"layout":"month_view"}'>Book!</a
-        >
+            If you are in the bay area I am now booking grad portrait sessions!  
+            <a data-cal-link="alecvd/photo-session" data-cal-namespace="" data-cal-config='{"layout":"month_view"}' class="social-link">Click to Book!</a>
+        </p>
     </div>
     <ContactForm/>
+  </div>
 </BaseLayout>
 
 <style>
-    /* p {
-        padding-top: 1em;
-    } */
+    p {
+        padding: 0.5em 0 0.5em 0;
+    }
     .social-link{
       color: black;
+    }
+    a{
+      text-decoration: underline;
+    }
+    .contact-cards{
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
     }
 </style>
 
@@ -44,4 +49,4 @@ Cal("init",  {origin:"https://cal.com"});
   // data-cal-namespace=""
   // `data-cal-config='{"layout":"month_view"}'`
   Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
-  </script>
+</script>
