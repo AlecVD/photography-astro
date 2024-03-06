@@ -4,7 +4,7 @@
 
 <div class="feedback-form">
     <h2>Contact Me:</h2>
-    <form netlify-honeypot name="feedback" method="POST" action="">
+    <form data-netlify="true" name="feedback" method="POST" action="">
         <p class="hidden">
             <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -32,6 +32,15 @@
     </form>
 </div>
 <style>
+    form{
+        padding-top: 1em;
+    }
+    label{
+        margin-top: 1em;
+    }
+    #message{
+        width: 36.5em;
+    }
     .form-top {
         display: flex;
         gap: 1em;
