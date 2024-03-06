@@ -43,11 +43,9 @@ body {
     height: auto;
 }
 @media (max-width: 800px) {
-    /* .gallery{
-        padding-bottom: 1em;
-    } */
     .gallery img{
         width: 32%;
+        padding-bottom: 0.5em;
     }
     body{
         margin-left: 2em;
