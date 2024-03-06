@@ -1,32 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro"
 ---
 
 <BaseLayout title="Contact">
     <div>
-        <h1>Contact Me</h1>
+        <!-- <h1>Contact Me</h1> -->
         <p>
-            If you are interested in working together reach out via Instagram,
-            Email, or Phone
+            Let's work together! You can also reach out via <a class="social-link" href="">Instagram</a>, <a class="social-link" href="">Phone</a> or <a class="social-link" href="">Email</a>.
         </p>
         <p>-Alec</p>
     </div>
     <div>
-        <h2>Grad Photos</h2>
+        <!-- <h2>Grad Photos</h2>
         <p>
             If you are in the bay area I am now booking grad portrait sessions!
-        </p>
+        </p> -->
         <a
             data-cal-link="alecvd/photo-session"
             data-cal-namespace=""
             data-cal-config='{"layout":"month_view"}'>Book!</a
         >
     </div>
+    <ContactForm/>
 </BaseLayout>
 
 <style>
-    p {
+    /* p {
         padding-top: 1em;
+    } */
+    .social-link{
+      color: black;
     }
 </style>
 

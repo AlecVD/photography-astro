@@ -1,0 +1,42 @@
+---
+
+---
+
+<div class="feedback-form">
+    <h2>Contact Me:</h2>
+    <form netlify-honeypot name="feedback" method="POST" action="">
+        <p class="hidden">
+            <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+        </p>
+        <!-- <input type="hidden" name="form-name" value="feedback" /> -->
+        <div class="form-top">
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" required />
+            </div>
+        </div>
+
+        <label for="message">Message:</label>
+        <div>
+            <textarea id="message" wrap="soft" name="message" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<style>
+    .form-top {
+        display: flex;
+        gap: 1em;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
