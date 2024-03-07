@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
 import { Image } from "astro:assets";
 const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
 ---
 
 <BaseLayout title="Portraits">
+    <Footer />
     <div class="gallery">
         {
             images.map((img) => (
