@@ -26,7 +26,7 @@
         <div>
             <textarea id="message" wrap="soft" name="message" required></textarea>
         </div>
-        <div>
+        <div id="submit-button">
             <button type="submit">Submit</button>
         </div>
     </form>
@@ -38,8 +38,14 @@
     label{
         margin-top: 1em;
     }
+    input{
+        /* border: 1em; */
+    }
+    textarea,input{
+        border: 1px solid grey;
+    }
     #message{
-        width: 36.5em;
+        width: 36em;
     }
     .form-top {
         display: flex;
