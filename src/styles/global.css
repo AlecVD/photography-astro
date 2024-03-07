@@ -42,14 +42,17 @@ body {
     padding-bottom: 0.8em;
     height: auto;
 }
+.social-link {
+    color: black;
+    text-decoration: underline;
+}
 @media (max-width: 800px) {
-    .gallery img{
+    .gallery img {
         width: 32%;
         padding-bottom: 0.5em;
     }
-    body{
+    body {
         margin-left: 2em;
         margin-right: 2em;
     }
-    
 }
