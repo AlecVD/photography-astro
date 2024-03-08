@@ -10,10 +10,11 @@ const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
     <Footer />
     <div class="gallery">
         {
-            images.map((img) => (
-                <Image src={img.default} alt="portraits" quality="high" />
+            images.slice(0,-1).map((img) => (
+                <Image src={img.default} alt="portraits" quality="high"/>
             ))
         }
+        <Image src={images.slice(-1)[0].default} alt="portraits" quality="high" id="last-image"/>
     </div>
     
 </BaseLayout>
