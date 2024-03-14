@@ -37,10 +37,21 @@ body {
     justify-content: space-between;
 }
 .gallery img {
-    /* width: 24.3%; */
     width: 19.3%;
     padding-bottom: 0.8em;
     height: auto;
+}
+.alt-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+.alt-gallery img{
+    
+    height:42vh;
+    width: auto;
+    /* width: auto; */
 }
 .social-link {
     color: black;

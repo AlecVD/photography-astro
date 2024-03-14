@@ -1,9 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { Image } from "astro:assets";
+const images = await Astro.glob("..//assets/travel/*.{jpeg,jpg,png,gif}");
 ---
 
 <BaseLayout title="Travel">
-    <div>Coming Soon...</div>
+    <div class="alt-gallery">
+        {
+            images.slice(0,-1).map((img) => (
+                <Image src={img.default} alt="travel" quality="high"/>
+            ))
+        }
+        <Image src={images.slice(-1)[0].default} alt="travel" quality="high" id="last-image"/>
+    </div>
 </BaseLayout>
 
 <style></style>
