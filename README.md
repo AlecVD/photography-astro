@@ -1,3 +1,4 @@
 # Astro Photography Site
 
-Very fast
+My Photography Portfolio Site ;)
+
