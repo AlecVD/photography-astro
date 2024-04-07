@@ -1,3 +1,5 @@
 # Astro Photography Site
 
-Very fast
+My Personal Photography portfolio site! ;)
+
+@alecvd
