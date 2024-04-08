@@ -1,16 +1,18 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import heroImage from "..//assets/portrait/13.jpg"
 ---
 
 <BaseLayout title="Grad Info">
     <div class="card">
         <h1>Graduate Photo Sessions</h1>
     </div>
-
+    <Image src={heroImage} alt="portraits" quality="high"/>
     <div>
         <h2>Pricing:</h2>
-        <p>Starting at $200 for a 45 minute session</p>
-
+        <p>Starting at $250 for a 45 minute session</p>
         <ul>
             <li>20-40 Images.</li>
             <li>Basic editing included.</li>
@@ -33,5 +35,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
     .bottomspace {
         padding-bottom: 1em;
+    }
+    img{
+        width: 20em;
+        height: auto;
     }
 </style>
