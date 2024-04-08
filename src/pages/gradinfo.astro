@@ -9,23 +9,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div>
         <h2>Pricing:</h2>
-
-        <h3>Graduating and Senior Sessions</h3>
-
         <p>Starting at $200 for a 45 minute session</p>
 
         <ul>
             <li>20-40 Images.</li>
             <li>Basic editing included.</li>
-            <li>You will recieve full resolution digital files suitable for printing.</li>
+            <li>
+                You will recieve full resolution digital files suitable for
+                printing.
+            </li>
             <li>Quick turnaround recieve your images withing 48-96 hours.</li>
         </ul>
     </div>
 </BaseLayout>
 <style>
+    p {
+        padding: 0.5em 0 0.5em 0;
+    }
     .card {
         display: flex;
         flex-direction: column;
+        padding-bottom: 1em;
+    }
+    .bottomspace {
         padding-bottom: 1em;
     }
 </style>
