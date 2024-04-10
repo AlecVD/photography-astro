@@ -4,7 +4,13 @@
 
 <div class="feedback-form">
     <h2>Contact Me:</h2>
-    <form data-netlify="true" netlify-honeypot="bot-field" name="feedback" method="POST" action="">
+    <form
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        name="feedback"
+        method="POST"
+        action=""
+    >
         <p class="hidden">
             <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -24,7 +30,8 @@
 
         <label for="message">Message:</label>
         <div>
-            <textarea id="message" wrap="soft" name="message" required></textarea>
+            <textarea id="message" wrap="soft" name="message" required
+            ></textarea>
         </div>
         <div id="submit-button">
             <button type="submit">Submit</button>
@@ -32,26 +39,27 @@
     </form>
 </div>
 <style>
-    form{
+    form {
         padding-top: 1em;
     }
-    label{
+    label {
         margin-top: 1em;
     }
-    input{
+    input {
         /* border: 1em; */
     }
-    textarea,input{
+    textarea,
+    input {
         border: 1px solid grey;
     }
-    button{
+    button {
         margin-top: 0.4em;
         /* padding: 1px; */
         font-family: var(--font-body);
         font-weight: 200;
         font-size: 1em;
     }
-    #message{
+    #message {
         width: 35em;
         max-width: 100%;
     }
