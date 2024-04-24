@@ -46,6 +46,12 @@ body {
     color: black;
     text-decoration: underline;
 }
+.bottomspace {
+    padding-bottom: 1em;
+}
+.smallbottomspace {
+    padding-bottom: 0.5em;
+}
 @media (max-width: 800px) {
     .gallery img {
         width: 49%;
