@@ -10,9 +10,10 @@ import Cal from "../components/Cal.astro";
         <h1>Graduate Photo Sessions</h1>
     </div>
     <!-- <Image src={heroImage} alt="portraits" quality="high"/> -->
-    <div>
-        <h2>Pricing:</h2>
-        <p>Starting at $150</p>
+    <div class="bottomspace">
+        <!-- <h2 class="smallbottomspace">Pricing:</h2> -->
+        <h2>Early Bird Discount!</h2>
+        <p>Starting at <a id="deal">$200</a> $150!</p>
         <ul>
             <li>40+ Images.</li>
             <li>Basic editing included.</li>
@@ -22,7 +23,7 @@ import Cal from "../components/Cal.astro";
             </li>
             <li>Quick turnaround receive your images withing 48-96 hours.</li>
         </ul>
-        <p>Contact for group pricing.</p>
+        <p>Group pricing:</p>
         <table>
             <tr>
                 <th># of People |</th>
@@ -61,9 +62,8 @@ import Cal from "../components/Cal.astro";
                 <td>$500</td>
             </tr>
         </table>
-
     </div>
-    <div id="booking"><Cal text="Book Now!" /></div>
+    <div id="booking"><Cal text="Book Here!" /></div>
 </BaseLayout>
 <style>
     p {
@@ -72,9 +72,6 @@ import Cal from "../components/Cal.astro";
     .card {
         display: flex;
         flex-direction: column;
-        padding-bottom: 1em;
-    }
-    .bottomspace {
         padding-bottom: 1em;
     }
     tr{
@@ -86,6 +83,9 @@ import Cal from "../components/Cal.astro";
     img {
         width: 20em;
         height: auto;
+    }
+    #deal{
+        text-decoration: line-through;
     }
     #booking{
         font-size: 1.5em;
