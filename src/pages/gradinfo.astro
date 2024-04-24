@@ -23,6 +23,45 @@ import Cal from "../components/Cal.astro";
             <li>Quick turnaround receive your images withing 48-96 hours.</li>
         </ul>
         <p>Contact for group pricing.</p>
+        <table>
+            <tr>
+                <th># of People |</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>$200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>$250</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>$350</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>$400</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>$450</td>
+            </tr>
+            <tr>
+                <td>8+</td>
+                <td>$500</td>
+            </tr>
+        </table>
+
     </div>
     <div id="booking"><Cal text="Book Now!" /></div>
 </BaseLayout>
@@ -37,6 +76,12 @@ import Cal from "../components/Cal.astro";
     }
     .bottomspace {
         padding-bottom: 1em;
+    }
+    tr{
+        text-align: center;
+    }
+    th{
+        font-weight: 200;
     }
     img {
         width: 20em;
