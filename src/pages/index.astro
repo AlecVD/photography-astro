@@ -7,7 +7,6 @@ const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
 ---
 
 <BaseLayout title="Portraits">
-    <Footer />
     <div class="gallery">
         <!-- Use when odd number off images to remove last on mobile -->
         {
@@ -22,6 +21,7 @@ const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
             ))
         } -->
     </div>
+    <Footer />
 </BaseLayout>
 
 <style></style>
