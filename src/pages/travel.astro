@@ -1,9 +1,41 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+import { Image } from "astro:assets";
+const images = await Astro.glob("..//assets/travel/*.{jpeg,jpg,png,gif}");
 ---
 
 <BaseLayout title="Travel">
-    <div>Coming Soon...</div>
+    <div class="travelgallery">
+        {
+        images.map((img) => (
+                <Image src={img.default} alt="portraits" quality="high" />
+            ))
+        }
+    </div>
+    <Footer />
 </BaseLayout>
 
-<style></style>
+<style>
+    .travelgallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .travelgallery img[width*="2048"]{
+        height: 100%;
+        width: 49.33%;
+        /* width: 19.3%; */
+        padding-bottom: 0.8em;
+        
+    }
+    .travelgallery img {
+        height: 100%;
+        width: 24%;
+        /* width: 19.3%; */
+        padding-bottom: 0.8em;
+        
+    }
+    
+</style>
