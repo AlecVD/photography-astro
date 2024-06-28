@@ -10,7 +10,7 @@ const images = await Astro.glob("..//assets/travel/*.{jpeg,jpg,png,gif}");
     <div class="travelgallery">
         {
         images.map((img) => (
-                <Image src={img.default} alt="portraits" quality="high" />
+                <Image src={img.default} alt="portraits" quality="low" />
             ))
         }
     </div>
