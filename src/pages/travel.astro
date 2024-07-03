@@ -26,16 +26,28 @@ const images = await Astro.glob("..//assets/travel/*.{jpeg,jpg,png,gif}");
     .travelgallery img[width*="2048"]{
         height: 100%;
         width: 49.33%;
-        /* width: 19.3%; */
         padding-bottom: 0.8em;
         
     }
     .travelgallery img {
         height: 100%;
         width: 24%;
-        /* width: 19.3%; */
         padding-bottom: 0.8em;
         
     }
-    
+
+    @media (max-width: 800px) {
+    .travelgallery img[width*="2048"]{
+        height: 100%;
+        width: 99%;
+        padding-bottom: 0.8em;
+        
+    }
+    .travelgallery img {
+        height: 100%;
+        width: 49%;
+        padding-bottom: 0.8em;
+        
+    }
+}
 </style>
