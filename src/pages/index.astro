@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Footer from "../components/Footer.astro";
 
 import { Image } from "astro:assets";
-const images = await Astro.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}");
+const images = Object.values(import.meta.glob("..//assets/portrait/*.{jpeg,jpg,png,gif}", { eager: true }));
 ---
 
 <BaseLayout title="Portraits">
